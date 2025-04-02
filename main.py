@@ -20,6 +20,7 @@ from datetime import datetime
 import concurrent.futures
 import ctypes
 import imaplib
+import platform
 
 config = yaml.safe_load(open("config.yml", "r").read())
 
@@ -147,7 +148,7 @@ def set_cmd_window_title(GENNED, LOCKED):
       ctypes.windll.kernel32.SetConsoleTitleW(title)
   
     else:
-      return " NOT MF WINDOWS
+      return " NOT MF WINDOWS"
 
 set_cmd_window_title(GENNED, LOCKED)
 
